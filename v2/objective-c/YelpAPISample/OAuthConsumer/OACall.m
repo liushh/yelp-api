@@ -70,32 +70,19 @@
 		   method:(NSString *)aMethod
 	   parameters:(NSArray *)theParameters
 			files:(NSDictionary*)theFiles {
-	url = [aURL retain];
-	method = [aMethod retain];
-	parameters = [theParameters retain];
-	files = [theFiles retain];
+  url = aURL;
+	method = aMethod;
+	parameters = theParameters;
+	files = theFiles;
 	fetcher = nil;
 	request = nil;
 	
 	return self;
 }
 
-- (void)dealloc {
-	[url release];
-	[method release];
-	[parameters release];
-	[files release];
-	[fetcher release];
-	[request release];
-	[ticket release];
-	[super dealloc];
-}
-
 - (void)callFailed:(OAServiceTicket *)aTicket withError:(NSError *)error {
 	NSLog(@"error body: %@", aTicket.body);
-	self.ticket = aTicket;
-	[aTicket release];
-	OAProblem *problem = [OAProblem problemWithResponseBody:ticket.body];
+	self.ticket = aTicket;	OAProblem *problem = [OAProblem problemWithResponseBody:ticket.body];
 	if (problem) {
 		[delegate call:self failedWithProblem:problem];
 	} else {
@@ -105,13 +92,12 @@
 
 - (void)callFinished:(OAServiceTicket *)aTicket withData:(NSData *)data {
 	self.ticket = aTicket;
-	[aTicket release];
 	if (ticket.didSucceed) {
 //		NSLog(@"Call body: %@", ticket.body);
 		[delegate performSelector:finishedSelector withObject:self withObject:ticket.body];
 	} else {
 //		NSLog(@"Failed call body: %@", ticket.body);
-		[self callFailed:[ticket retain] withError:nil];
+		[self callFailed:ticket withError:nil];
 	}
 }
 
@@ -139,7 +125,7 @@
 	}
 	if (self.files) {
 		for (NSString *key in self.files) {
-			[request attachFileWithName:@"file" filename:NSLocalizedString(@"Photo.jpg", @"") data:[self.files objectForKey:key]];
+//			[request attachFileWithName:@"file" filename:NSLocalizedString(@"Photo.jpg", @"") data:[self.files objectForKey:key]];
 		}
 	}
 	fetcher = [[OADataFetcher alloc] init];

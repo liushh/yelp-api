@@ -55,13 +55,13 @@
 - (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret session:(NSString *)aSession
 		 duration:(NSNumber *)aDuration attributes:(NSDictionary *)theAttributes created:(NSDate *)creation
 		renewable:(BOOL)renew {
-	[super init];
+	self = [super init];
 	self.key = aKey;
 	self.secret = aSecret;
 	self.session = aSession;
 	self.duration = aDuration;
-	self.attributes = theAttributes;
-	created = [creation retain];
+	self.attributes = [[NSMutableDictionary alloc] initWithDictionary:theAttributes];
+	created = creation;
 	renewable = renew;
 	forRenewal = NO;
 
@@ -104,7 +104,7 @@
 }
 
 - (id)initWithUserDefaultsUsingServiceProviderName:(const NSString *)provider prefix:(const NSString *)prefix {
-	[super init];
+	self = [super init];
 	self.key = [OAToken loadSetting:@"key" provider:provider prefix:prefix];
 	self.secret = [OAToken loadSetting:@"secret" provider:provider prefix:prefix];
 	self.session = [OAToken loadSetting:@"session" provider:provider prefix:prefix];
@@ -114,7 +114,6 @@
 	renewable = [[OAToken loadSetting:@"renewable" provider:provider prefix:prefix] boolValue];
 
 	if (![self isValid]) {
-		[self autorelease];
 		return nil;
 	}
 	
@@ -128,7 +127,6 @@
     self.secret = nil;
     self.duration = nil;
     self.attributes = nil;
-	[super dealloc];
 }
 
 #pragma mark settings
@@ -177,7 +175,6 @@
 }
 
 - (void)setAttributes:(NSDictionary *)theAttributes {
-	[attributes release];
 	if (theAttributes) {
 		attributes = [[NSMutableDictionary alloc] initWithDictionary:theAttributes];
 	}else {
@@ -199,9 +196,7 @@
 	for(NSString *aKey in self->attributes) {
 		[chunks addObject:[NSString stringWithFormat:@"%@:%@", aKey, [attributes objectForKey:aKey]]];
 	}
-	NSString *attrs = [chunks componentsJoinedByString:@";"];
-	[chunks release];
-	return attrs;
+	NSString *attrs = [chunks componentsJoinedByString:@";"];	return attrs;
 }
 
 - (NSString *)attribute:(NSString *)aKey
@@ -211,12 +206,12 @@
 
 - (void)setAttributesWithString:(NSString *)theAttributes
 {
-	self.attributes = [[self class] attributesWithString:theAttributes];
+	self.attributes = (NSMutableDictionary *)[OAToken attributesWithString:theAttributes];
 }
 
-- (NSDictionary *)parameters
-{
-	NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
+- (NSDictionary *)parameters {
+  NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+                                 
 
 	if (key) {
 		[params setObject:key forKey:@"oauth_token"];
@@ -316,7 +311,7 @@
 		NSArray *elements = [pair componentsSeparatedByString:@":"];
 		[dct setObject:[elements objectAtIndex:1] forKey:[elements objectAtIndex:0]];
 	}
-	return [dct autorelease];
+	return dct;
 }
 
 #pragma mark description

@@ -10,23 +10,23 @@
 		8906AB041963964000198A29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8906AB031963964000198A29 /* Foundation.framework */; };
 		8906AB071963964000198A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB061963964000198A29 /* main.m */; };
 		8906AB3C1963965500198A29 /* YPAPISample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB131963965500198A29 /* YPAPISample.m */; };
-		8906AB3D1963965500198A29 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB181963965500198A29 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB3E1963965500198A29 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1A1963965500198A29 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB3F1963965500198A29 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1C1963965500198A29 /* NSURL+Base.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB401963965500198A29 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1E1963965500198A29 /* Base64Transcoder.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB411963965500198A29 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB201963965500198A29 /* hmac.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB421963965500198A29 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB221963965500198A29 /* sha1.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB431963965500198A29 /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB251963965500198A29 /* OACall.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB441963965500198A29 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB271963965500198A29 /* OAConsumer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB451963965500198A29 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB291963965500198A29 /* OADataFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB461963965500198A29 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2B1963965500198A29 /* OAHMAC_SHA1SignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB471963965500198A29 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2D1963965500198A29 /* OAMutableURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB481963965500198A29 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2F1963965500198A29 /* OAPlaintextSignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB491963965500198A29 /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB311963965500198A29 /* OAProblem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB4A1963965500198A29 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB331963965500198A29 /* OARequestParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB4B1963965500198A29 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB351963965500198A29 /* OAServiceTicket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB4C1963965500198A29 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB381963965500198A29 /* OAToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8906AB4D1963965500198A29 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB3A1963965500198A29 /* OATokenManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8906AB3D1963965500198A29 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB181963965500198A29 /* NSMutableURLRequest+Parameters.m */; };
+		8906AB3E1963965500198A29 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1A1963965500198A29 /* NSString+URLEncoding.m */; };
+		8906AB3F1963965500198A29 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1C1963965500198A29 /* NSURL+Base.m */; };
+		8906AB401963965500198A29 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB1E1963965500198A29 /* Base64Transcoder.c */; };
+		8906AB411963965500198A29 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB201963965500198A29 /* hmac.c */; };
+		8906AB421963965500198A29 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB221963965500198A29 /* sha1.c */; };
+		8906AB431963965500198A29 /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB251963965500198A29 /* OACall.m */; };
+		8906AB441963965500198A29 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB271963965500198A29 /* OAConsumer.m */; };
+		8906AB451963965500198A29 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB291963965500198A29 /* OADataFetcher.m */; };
+		8906AB461963965500198A29 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2B1963965500198A29 /* OAHMAC_SHA1SignatureProvider.m */; };
+		8906AB471963965500198A29 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2D1963965500198A29 /* OAMutableURLRequest.m */; };
+		8906AB481963965500198A29 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB2F1963965500198A29 /* OAPlaintextSignatureProvider.m */; };
+		8906AB491963965500198A29 /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB311963965500198A29 /* OAProblem.m */; };
+		8906AB4A1963965500198A29 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB331963965500198A29 /* OARequestParameter.m */; };
+		8906AB4B1963965500198A29 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB351963965500198A29 /* OAServiceTicket.m */; };
+		8906AB4C1963965500198A29 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB381963965500198A29 /* OAToken.m */; };
+		8906AB4D1963965500198A29 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906AB3A1963965500198A29 /* OATokenManager.m */; };
 		8972F98B1964BC0E00910FEA /* NSURLRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 8972F98A1964BC0E00910FEA /* NSURLRequest+OAuth.m */; };
 /* End PBXBuildFile section */
 
@@ -357,6 +357,7 @@
 		8906AB0F1963964000198A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YelpAPISample/YelpAPISample-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +367,7 @@
 		8906AB101963964000198A29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YelpAPISample/YelpAPISample-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
